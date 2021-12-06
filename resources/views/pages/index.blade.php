@@ -1,6 +1,6 @@
 @extends('layout.master')
 @section('content')
-    <table table="table">
+    <table>
         <thead>
         <tr>
             <td>標題</td>
