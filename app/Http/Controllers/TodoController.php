@@ -19,4 +19,9 @@ class TodoController extends Controller
     {
         return view('pages.create');
     }
+
+    public function store(Request $request)
+    {
+        dd($request);
+    }
 }

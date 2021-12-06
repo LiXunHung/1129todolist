@@ -1,6 +1,6 @@
 @extends('layout.master')
 @section('content')
-    <form>
+    <form action="{{route('store')}}}">
         <label>標題</label>
         <input name="title">
         <label>內容</label>
