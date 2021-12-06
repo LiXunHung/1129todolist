@@ -16,4 +16,5 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', function () {
 //    return view('layout.master');
 //});
-Route::get('/',[\App\Http\Controllers\TestController::class,'test']);
+Route::get('/',[\App\Http\Controllers\TodoController::class,'index']);
+Route::get('/',[\App\Http\Controllers\TodoController::class,'create']);
