@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', function () {
 //    return view('layout.master');
 //});
-Route::get('/',[\App\Http\Controllers\TodoController::class,'index']);
-Route::get('/create',[\App\Http\Controllers\TodoController::class,'create']);
-Route::get('/store',[\App\Http\Controllers\TodoController::class,'store'])->name('store');
+Route::get('/',[\App\Http\Controllers\TodoController::class,'index'])->name('index');
+Route::get('/create',[\App\Http\Controllers\TodoController::class,'get_create_data'])->name('get_create_data');
+Route::post('/create',[\App\Http\Controllers\TodoController::class,'store_create'])->name('store_create');
