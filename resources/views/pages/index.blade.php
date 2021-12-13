@@ -1,6 +1,6 @@
 @extends('layout.master')
 @section('content')
-    <table>
+    <table class="table">
         <thead>
         <tr>
             <td>標題</td>
@@ -14,6 +14,10 @@
                 <td>{{$row->title}}</td>
                 <td>{{$row->content}}</td>
                 <td>{{$row->remark}}</td>
+                <td>
+                    <button class="btn btn-outline-success">修改</button>
+                    <button class="btn btn-outline-danger">刪除</button>
+                </td>
             </tr>
         @endforeach
         </tbody>
