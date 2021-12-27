@@ -15,11 +15,19 @@
                 <td>{{$row->content}}</td>
                 <td>{{$row->remark}}</td>
                 <td>
-                    <button class="btn btn-outline-success">修改</button>
-                    <button class="btn btn-outline-danger">刪除</button>
+                    <button class="btn btn-outline-success" onclick="edit_data({{$row->id}})">修改</button>
+                    <button class="btn btn-outline-danger" onclick="delete_data({{$row->id}})">刪除</button>
                 </td>
             </tr>
         @endforeach
         </tbody>
     </table>
+    <script>
+        function delete_data(id){
+            window.location.href = `{{route("delete_data")}}` + "?id" + id;
+        }
+        function edit_data(id){
+            window.location.href = `{{route("get_edit_data")}}` + "?id" + id;
+        }
+    </script>
 @endsection
